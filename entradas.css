@@ -1,0 +1,54 @@
+
+/*formato fondo imagen*/
+body{
+    background-image: url("/ventaentradas/3d-rendering-closeup-of-argentina-flag-free-photo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .foto2 { 
+
+    float: right; width: 400px; height: 400px; 
+}
+
+
+/* formato eleccion de entradas*/
+
+
+.formulario {
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+
+ }
+
+ p{
+  display: inline-block;
+}
+
+.formu{
+margin-left: 10px;
+padding: 18px;
+}
+
+input{
+  color: black;
+
+}
+
+
+/*formato datos de tarjeta de credito*/
+
+
+ 
+ .hide {
+
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/ventaentradas/entradas.css" />
+    <link rel="icon" type="image/x-icon" href="/ventaentradas/Argentine_Football_Association_logo.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   <!-- formato de formulario de entradas -->
+
+    <div class="formulario">
+        <label for="categoria" required >Seleccione rival y fecha:</label>
+        <select name="categoria" id="categoria1" required>
+            <option value="categoria">Seleccione rival …</option>
+            <option value="Ecuador">vs Ecuador 10/9/2023</option>
+            <option value="Uruguay">vs. Uruguay 15/10/2023</option>
+            <option value="Bolivia ">vs. Bolivia 15/11/2023</option>
+            <option value="Chile ">vs. Chile 10/9/2024</option>
+            <option value="Paraguay">vs. Paraguay 10/11/2024</option>
+            <option value="Perú">vs. Perú 15/11/2024</option>
+            <option value="Brasil">vs. Brasil 15/05/2025</option>
+            <option value="Colombia">vs. Colombia 10/11/20235</option>
+            <option value="Venezuela">vs. Venezuela 5/10/2025</option>
+
+        </select>
+    </div>
+
+    <div class="formulario">
+
+       
+
+        <label for="estadio" required>Lugar del estadio:</label>
+        <select  id="miLista" onchange="mostrarPrecio()" name="estadio" required>
+            <option value="estadio">Seleccione lugar en el estadio …</option>
+            <option value="General">General</option>
+            <option value="Sívori/Centenario Alta">Sívori/Centenario Alta</option>
+            <option value="San Martín/Belgrano Baja">San Martín/Belgrano Baja</option>
+            <option value="San Martín/Belgrano Media">San Martín/Belgrano Media</option>
+
+        </select>
+        <div class="formu">
+        <p id="price">Seleccione una ubicacion</p>
+       </div>
+
+
+        <div class="formulario">
+            <label  for="cantidad de entradas">Cantidad de entradas:</label>
+            <input name="cantidad" id="cantidad"  class="input" type="number" min=0 max=5 required>
+        </div>
+
+        <div  class="formulario" id="finish" >
+        <input type="submit" style="color: black"  id="finish" onclick="cero()" value="Confirmar Compra">
+        </div>
+
+    </div>
+
+
+
+<!-- datos de tarjeta -->
+
+    <span class="hide" id="tarjeta">
+
+    <form action="" method="post" class="formulario">
+
+        <h1>DATOS DE LA TARJETA DE CREDITO/DEBITO</h1>
+
+        <label for="numero">Numero de la Tarjeta: </label> 
+        <input type="text" name="numero"  id="Numero" required><br>
+
+        <label for="vencimiento">Mes y año de vencimiento: </label> 
+        <input type="text" name="vencimiento"  id="vencimiento" required><br>
+
+        
+        <label for="Codigo">Codigo: </label> 
+        <input type="text" name="Codigo" id="Codigo" required><br>
+
+        <input type="submit" value="Terminar Compra" > 
+    </form>
+   </span>
+
+    <img  class="foto2" src="/ventaentradas/Argentine_Football_Association_logo.svg.png" alt="texto que aprace si la imagen no carga" height="300px" width="350px"/>
+    <script src="/ventaentradas/entradas.js"></script>
+
+</body>
+</html>
