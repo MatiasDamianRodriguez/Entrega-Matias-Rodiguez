@@ -16,7 +16,8 @@ function mostrarPrecio() {
     const seleccion = lista.options[lista.selectedIndex].value;
     const precios = precio[seleccion];
     precio2.innerHTML =`${seleccion}: ${precios}`;
-}
+    
+} 
 
 //controla que la cantidad de entradas no sea cero o mas de 5
 var cantidad = document.getElementById("cantidad")
