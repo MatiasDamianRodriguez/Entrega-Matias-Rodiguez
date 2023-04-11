@@ -1,7 +1,7 @@
 
 /*formato fondo imagen*/
 body{
-    background-image: url("/Entrega-Matias-Rodiguez/3d-rendering-closeup-of-argentina-flag-free-photo.jpg");
+    background-image: url("/3d-rendering-closeup-of-argentina-flag-free-photo.jpg");
     background-size: cover;
     background-attachment: fixed;
   }

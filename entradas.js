@@ -20,7 +20,7 @@ function mostrarPrecio() {
 } 
 
 //controla que la cantidad de entradas no sea cero o mas de 5
-var cantidad = document.getElementById("cantidad")
+const cantidad = document.getElementById("cantidad")
 const finish = document.getElementById("finish")
 
 function cero() {
