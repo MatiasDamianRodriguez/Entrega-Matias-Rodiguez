@@ -27,7 +27,7 @@ function cero() {
     if(cantidad.value ==0){
         alert("La cantidad de entradas no puede ser cero")
     }
-    if(cantidad.value >=5){
+    if(cantidad.value >=6){
             alert("La cantidad de entradas no puede ser mayor a cinco")
          }
      
@@ -56,6 +56,38 @@ function cero() {
      
 
 
+
+     /*haciendo el ciclo*/
+
+     let boton_validar= document.getElementById("terminartodo");
+     boton_validar.addEventListener("click", validarFormulario );
+
+
+     function validarFormulario() {
+        var formulario = document.getElementById("mifomulario");
+        var esValido = true;
+      
+        // Recorrer todos los campos del formulario
+        for (var i = 0; i < formulario.elements.length; i++) {
+          var campo = formulario.elements[i];
+      
+          // Validar cada campo
+          if (campo.type === "number" && campo.value === "") {
+            esValido = false;
+            break;
+          } else if (campo.type === "date" && campo.value === "") {
+            esValido = false;
+            break;
+          }
+        }
+      
+        // Si el formulario es válido, enviarlo
+        if (esValido) {
+          formulario.submit();
+        } else {
+          alert("Por favor, completa todos los campos correctamente.");
+        }
+      }
 
 
 

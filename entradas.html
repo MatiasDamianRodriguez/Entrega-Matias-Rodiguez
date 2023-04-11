@@ -34,8 +34,7 @@
 
     <div class="formulario">
 
-       
-
+        
         <label for="estadio" required>Lugar del estadio:</label>
         <select  id="miLista" onchange="mostrarPrecio()" name="estadio" required>
             <option value="estadio">Seleccione lugar en el estadio …</option>
@@ -67,21 +66,21 @@
 
     <span class="hide" id="tarjeta">
 
-    <form action="" method="post" class="formulario">
+    <form action="" method="post" class="formulario" id = "mifomulario">
 
         <h1>DATOS DE LA TARJETA DE CREDITO/DEBITO</h1>
 
         <label for="numero">Numero de la Tarjeta: </label> 
-        <input type="text" name="numero"  id="Numero" required><br>
+        <input type="number" name="numero"  id="Numero" required><br>
 
         <label for="vencimiento">Mes y año de vencimiento: </label> 
-        <input type="text" name="vencimiento"  id="vencimiento" required><br>
+        <input type="date" name="vencimiento"  id="vencimiento" required><br>
 
         
         <label for="Codigo">Codigo: </label> 
-        <input type="text" name="Codigo" id="Codigo" required><br>
+        <input type="number" name="Codigo" id="Codigo" required><br>
 
-        <input type="submit" value="Terminar Compra" > 
+        <input type="submit" value="Terminar Compra" id="terminartodo"> 
     </form>
    </span>
 
