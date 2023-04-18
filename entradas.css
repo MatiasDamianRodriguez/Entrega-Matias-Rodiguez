@@ -51,4 +51,11 @@ input{
   display: block;
 }
 
+.hide2 {
 
+  display: none;
+}
+
+.show2{
+  display: block;
+}

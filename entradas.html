@@ -35,13 +35,13 @@
     <div class="formulario">
 
         
-        <label for="estadio" required>Lugar del estadio:</label>
-        <select  id="miLista" onchange="mostrarPrecio()" name="estadio" required>
-            <option value="estadio">Seleccione lugar en el estadio …</option>
-            <option value="General">General</option>
-            <option value="Sívori/Centenario Alta">Sívori/Centenario Alta</option>
-            <option value="San Martín/Belgrano Baja">San Martín/Belgrano Baja</option>
-            <option value="San Martín/Belgrano Media">San Martín/Belgrano Media</option>
+        <label for="opcion" required>Lugar del estadio:</label>
+        <select  id="miLista" onchange="mostrarPrecio()"  required>
+            <option value="0">Seleccione lugar en el estadio …</option>
+            <option  value="12000">General</option>
+            <option  value="22000">Sívori/Centenario Alta</option>
+            <option  value="35000">San Martín/Belgrano Baja</option>
+            <option  value="55000">San Martín/Belgrano Media</option>
 
         </select>
         <div class="formu">
@@ -55,8 +55,10 @@
         </div>
 
         <div  class="formulario" id="finish" >
-        <input type="submit" style="color: black"  id="finish" onclick="cero()" value="Confirmar Compra">
+            <input type="submit" style="color: black"  id="finish" onclick="cero()"  value="Confirmar ubicacion">
+            
         </div>
+        
 
     </div>
 
@@ -80,9 +82,22 @@
         <label for="Codigo">Codigo: </label> 
         <input type="number" name="Codigo" id="Codigo" required><br>
 
-        <input type="submit" value="Terminar Compra" id="terminartodo"> 
+        <input type="button" value="Confirmar datos de la tarjeta" id="terminartodo"> 
     </form>
    </span>
+
+
+
+
+
+<span class="hide2" id="confirmarcompra" > 
+    <form class="formulario">
+    <input type="submit" value="Confirmar Compra" id="terminartodo2" > 
+</form>
+</span>
+
+
+
 
     <img  class="foto2" src="/Argentine_Football_Association_logo.svg.png" alt="texto que aprace si la imagen no carga" height="300px" width="350px"/>
     <script src="/entradas.js"></script>

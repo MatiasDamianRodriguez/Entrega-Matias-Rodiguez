@@ -1,23 +1,23 @@
 
 //muentra las ubicaciones compradas 
 const precio = {
-"General": "$12.000",
-"Sívori/Centenario Alta": "$22000",
-"San Martín/Belgrano Baja": "$35000",
-"San Martín/Belgrano Media": "$55000",
+"12000": "AR$ es el valor de cada ubicacion en el sector General",
+"22000": "AR$ es el valor de cada ubicacion en el sector Sívori/Centenario Alta",
+"35000": "AR$ es el valor de cada ubicacion en el sector San Martín/Belgrano Baja",
+"55000": "AR$ es el valor de cada ubicacion en el sector San Martín/Belgrano Media",
 };
 
-const claves = Object.keys(precio);
-
-precio2 = document.getElementById("price");
+const precio2 = document.getElementById("price");
+const precio3 = document.getElementById("price1");
 
 function mostrarPrecio() {
-    const lista = document.getElementById("miLista");
-    const seleccion = lista.options[lista.selectedIndex].value;
-    const precios = precio[seleccion];
+    let lista = document.getElementById("miLista");
+    let seleccion = lista.options[lista.selectedIndex].value;
+    let precios = precio[seleccion];
     precio2.innerHTML =`${seleccion}: ${precios}`;
     
-} 
+}
+
 
 //controla que la cantidad de entradas no sea cero o mas de 5
 const cantidad = document.getElementById("cantidad")
@@ -30,8 +30,9 @@ function cero() {
     if(cantidad.value >=6){
             alert("La cantidad de entradas no puede ser mayor a cinco")
          }
-     
-     };
+
+ }
+         
 
 //muestra/oculta el menu para poner los datos de la tarjeta
 
@@ -44,18 +45,8 @@ function cero() {
      function llamar(){
         tarjeta.classList.toggle("show");
 
-        /*if (tarjeta.classList.contains("show")) { 
-            boton_exp.innerHTML = "Cancelar compra";
-        
-        }
-        else {
-            boton_exp.innerHTML = "Confirmar compra";
-
-     }*/
      }
-     
-
-
+    
 
      /*haciendo el ciclo*/
 
@@ -83,12 +74,43 @@ function cero() {
       
         // Si el formulario es válido, enviarlo
         if (esValido) {
-          formulario.submit();
-        } else {
+          let boton5= document.getElementById("terminartodo");
+
+          let confirmarcompra= document.getElementById("confirmarcompra");
+          
+          boton5.addEventListener("click", llamar2 );
+          
+          function llamar2(){
+            confirmarcompra.classList.toggle("show2");
+             };
+            }
+        else {
           alert("Por favor, completa todos los campos correctamente.");
         }
       }
+ 
 
+
+  
+
+     
+
+        const lista = document.getElementById("miLista");
+        const btn = document.getElementById("terminartodo2");
+        const opciones = lista.options;
+        for (let i = 0; i < opciones.length; i++) {
+          opciones[i].value = i + 1;
+          break
+        }
+        
+        
+       btn.addEventListener("click", () => {
+          let valorSeleccionado = parseInt(lista.value);
+        const valor1 = valorSeleccionado * cantidad.value
+          alert("El total a pagar es: " + valor1);
+        });
+      
+      
 
 
 
