@@ -111,27 +111,3 @@ function cero() {
         });
       
       
-
-
-
-  /* alert("El precio de " + seleccion + " es " + precios);
-   for (const clave of claves) {
-    precio2.innerHTML =`${clave}: $precios{clave}`;
-}*/
- 
-
-
-
-
-
-
-
- /*Calcular el monto total de la compra
- function completarCompra(){
-    var total = 0;
-    for(i=0; i< product_list.length; i++){
-    console.log(product_list[i]);
-         total+=product_list[i].getTotal();
-    }
-    alert("Monto total a pagar: "+total);
-} */
