@@ -87,8 +87,7 @@ function cero() {
         else {
           alert("Por favor, completa todos los campos correctamente.");
         }
-      }
- 
+      } 
 
 
   
@@ -102,12 +101,33 @@ function cero() {
           opciones[i].value = i + 1;
           break
         }
+        //array para almacenar cuantas compras se han hecho
+        let arrayEntradas = [];
+
         
-        
-       btn.addEventListener("click", () => {
+       btn.addEventListener("click", (event) => {
           let valorSeleccionado = parseInt(lista.value);
         const valor1 = valorSeleccionado * cantidad.value
           alert("El total a pagar es: " + valor1);
-        });
+           event.preventDefault();
+      //creando array
+      let cant = cantidad.value;
       
+      class Entradas {
+        constructor(cantidad1) {
+          
+          this.cantidad1 = cantidad1;
+        }
+      }
+
+      const entrada = new Entradas(cant);
+
+      arrayEntradas.push(entrada);
       
+      console.log(arrayEntradas);
+      });
+
+
+      
+
+     
